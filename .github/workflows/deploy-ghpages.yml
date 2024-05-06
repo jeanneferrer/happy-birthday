@@ -1,16 +1,31 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is deploying to GitHub Pages 🚀
+name: GitHub Pages Deployment
+
 on: [push]
+
 jobs:
-  Deploy-GHPages:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: git config --global user.email "adiferrer@gmail.com"
-      - run: git config --global user.name "adiferrer"
-      - name: Deploy subfolder
+      - uses: actions/checkout@v3
+
+      # Optional build step, adjust based on your project's requirements
+      - name: Build Project (replace with your build commands)
+        run: |
+          npm install # Install dependencies (if applicable)
+          npm run build # Replace with your build command
+
+      - name: Configure Git user (optional)
+        run: |
+          git config --global user.email "adiferrer@gmail.com"
+          git config --global user.name "adiferrer"  # Optional, but recommended for clarity
+
+      - name: Deploy subfolder with Actions GH Pages (example)
         uses: peaceiris/actions-gh-pages@v3
-        with: 
+        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: dist  # Assuming your build output is in the dist folder
+
+      # Additional steps (optional)
+      - name: Verify deployment (optional)
+        run: |
+          echo "Deployment completed successfully!"
