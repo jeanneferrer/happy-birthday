@@ -1,0 +1,47 @@
+:root {
+    --dark-color: #9B1942;
+    --light-color: #6DFF70;
+}
+
+body {
+    background-color: var(--dark-color) !important;
+    color: var(--light-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h2 > span {
+    text-decoration: underline;
+}
+
+section {
+    width: 100%;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0 0 0.5em 0.25em var(--dark-color);
+}
+
+section:nth-of-type(even) {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--light-color);
+}

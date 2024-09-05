@@ -11,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .welcome {
@@ -39,6 +41,51 @@ body {
   width: 70vw;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.form > input {
+  padding: 0.5em;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25em;
+}
+
+.form > p {
+  display: none;
+  margin: 0;
+}
+
+.form > button {
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.25em;
+  background-color: var(--accent-color);
+  color: white;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  justify-content: center;
+  width: 100%;
+}
+
+.greeting-card {
+  height: max-content;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .welcome {
@@ -52,5 +99,13 @@ body {
 
   .welcome > p {
     width: 90vw;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .greeting-card {
+    width: 100%;
   }
 }
