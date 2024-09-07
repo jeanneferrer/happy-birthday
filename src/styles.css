@@ -41,26 +41,37 @@ body {
   width: 70vw;
 }
 
-.form {
+form {
   display: flex;
-  flex-direction: column;
   gap: 0.5em;
   padding: 1em;
 }
 
-.form > input {
+input, button {
+  font-size: 1em;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5em;
+}
+
+input {
+  height: 25px;
   padding: 0.5em;
   border: 1px solid var(--accent-color);
   border-radius: 0.25em;
 }
 
-.form > p {
+.message {
   display: none;
   margin: 0;
 }
 
-.form > button {
-  padding: 0.5em;
+button {
+  height: 40px;
   border: none;
   border-radius: 0.25em;
   background-color: var(--accent-color);

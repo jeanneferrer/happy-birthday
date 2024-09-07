@@ -57,6 +57,8 @@ form.onsubmit = (event) => {
   event.preventDefault();
 };
 
+const inputDiv = document.createElement('div');
+inputDiv.className = 'input-div';
 const input = document.createElement('input');
 input.type = 'text';
 input.placeholder = 'Enter code here';
@@ -65,6 +67,7 @@ input.addEventListener('input', () => {
 });
 
 const message = document.createElement('p');
+message.className = 'message';
 message.textContent = 'Code not found.';
 
 const submit = document.createElement('button');
@@ -80,6 +83,7 @@ submit.addEventListener('click', () => {
   }
 });
 
-form.append(input, message, submit);
+inputDiv.append(input, message);
+form.append(inputDiv, submit);
 welcomeDiv.append(form);
 document.body.appendChild(welcomeDiv);
