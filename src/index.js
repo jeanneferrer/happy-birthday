@@ -7,27 +7,6 @@ const listOfCodes = {
   SDA09182024: 'teph2024',
 };
 
-function loadingPage() {
-  const loadingPage = document.createElement('div');
-  loadingPage.setAttribute('id', 'loading-page');
-
-  const loadingText = document.createElement('p');
-  loadingText.textContent = 'Loading...';
-  loadingPage.appendChild(loadingText);
-
-  // await new Promise((resolve) => setTimeout(() => {
-  //   setTimeout(() => {
-  //     loadingPage.style.opacity = 0;
-  //     loadingPage.style.display = 'none';
-  //   }, 1000);
-  //   setTimeout(() => {
-  //     error.style.opacity = 1;
-  //     error.style.display = 'flex';
-  //   }, 1000);
-  //   resolve();
-  // }, 3000));
-}
-
 function renderGreeting(inputValue) {
   const code = inputValue;
   const greeting = listOfCodes[code];
@@ -46,6 +25,14 @@ function renderGreeting(inputValue) {
       console.error('Error importing module:', error);
     });
 }
+
+// loading page
+const loadingPage = document.createElement('div');
+loadingPage.setAttribute('id', 'loading-page');
+
+const loadingText = document.createElement('p');
+loadingText.textContent = 'Loading...';
+loadingPage.appendChild(loadingText);
 
 // welcome page with form to enter code
 const welcomeDiv = document.createElement('div');
@@ -72,16 +59,18 @@ message.textContent = 'Code not found.';
 
 const submit = document.createElement('button');
 submit.textContent = 'Submit';
-// upon submit, check if code is part of keys in listOfCodes
-submit.addEventListener('click', () => {
+submit.onclick = () => {
   if (Object.keys(listOfCodes).includes(input.value)) {
     welcomeDiv.style.display = 'none';
-    // loadingPage();
-    renderGreeting(input.value);
+    document.body.appendChild(loadingPage);
+    setTimeout(() => {
+      loadingPage.style.display = 'none';
+      renderGreeting(input.value);
+    }, 3000);
   } else {
     message.style.display = 'block';
   }
-});
+};
 
 inputDiv.append(input, message);
 form.append(inputDiv, submit);

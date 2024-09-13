@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Happy Birthday!',
+      favicon: 'src/assets/gen/cheers-emoji.svg',
     }),
   ],
   output: {
