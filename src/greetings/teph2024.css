@@ -10,7 +10,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: max-content;
     display: flex;
     justify-content: center;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 #teph2024 {
-    animation: shadow 1s ease-in-out;
+    animation: shadow 2s ease-in-out;
     background-color: var(--light-color);
     box-shadow: 10px 10px var(--dark-color);
     border-radius: 10px;
@@ -41,10 +41,94 @@ h1 {
     text-align: center;
 }
 
-img {
+img#party-cat {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--dark-color);
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--dark-color);
+}
+
+div#spotify-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+div#spotify-div > p {
+    text-align: center;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulsating box-shadow animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px #000000b7;
+    }
+    50% {
+        box-shadow: 0 0 40px #000000b7;
+    }
+    100% {
+        box-shadow: 0 0 20px #000000b7;
+    }
+}
+
+img#spotify-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #000000b7;
+    animation: rotate 4s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+#friend-greetings-header {
+    border-radius: 10px;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 10px;
+    font-style: italic;
+}
+
+.friend-pic {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--dark-color);
+}
+
+.friend-greeting {
+    display: flex;
+    align-items: end;
+    gap: 0.5em;
+}
+
+.message-bubble {
+    background-color: var(--dark-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.message-bubble > p {
+    color: var(--light-color);
 }
 
 @media (max-width: 768px) {
@@ -52,7 +136,7 @@ img {
         width: 70% !important;
     }
 
-    img {
+    img#party-cat {
         width: 200px;
         height: 200px;
     }
