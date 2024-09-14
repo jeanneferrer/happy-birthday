@@ -4,6 +4,7 @@ import ago from '../assets/teph2024/ago.jpg';
 import gabAly from '../assets/teph2024/gab-aly.jpg';
 import regina from '../assets/teph2024/reg.jpg';
 import us from '../assets/teph2024/us.jpg';
+import jeck from '../assets/teph2024/jeck.jpg';
 
 export default () => ({
   code: 'SDA09182024',
@@ -41,6 +42,7 @@ export default () => ({
     // next button
 
     const screenshotDiv = document.createElement('div');
+    screenshotDiv.id = 'screenshot-div';
     const screenshotHeader = document.createElement('p');
     screenshotHeader.textContent = 'here\'s a screenshot of greetings from your friends!';
     const friendGreetingsContainer = document.createElement('div');
@@ -67,6 +69,11 @@ export default () => ({
         name: 'Reg',
         picLink: regina,
         message: [['tep, people may not see you as the most reliable person in the room, but you\'ve proven yourself as the most reliable friend. you are lucky to have someone like Adi, as well as I know that she is with you.', 'happiest birthday, esteban.']],
+      },
+      {
+        name: 'Jeck',
+        picLink: jeck,
+        message: [['to the man who owes me 2 cans of that one discontinued energy drink or should pay me a 100. happy birthday man, thanks for accompanying my stupid depressed ass xD', 'glad you now have someone supporting you other than us, youre a lucky bastard xD', 'proud of you for choosing to give yourself a chance to see a better day.', 'happy birthday again brotha. lets hang out again some time, cheers.']],
       },
     ];
     friendGreetings.forEach((friend) => {
