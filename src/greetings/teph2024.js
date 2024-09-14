@@ -2,6 +2,8 @@ import './teph2024.css';
 import spotifyLogo from '../assets/gen/spotify-logo.png';
 import ago from '../assets/teph2024/ago.jpg';
 import gabAly from '../assets/teph2024/gab-aly.jpg';
+import regina from '../assets/teph2024/reg.jpg';
+import us from '../assets/teph2024/us.jpg';
 
 export default () => ({
   code: 'SDA09182024',
@@ -19,18 +21,6 @@ export default () => ({
       .then((response) => {
         img.src = response.data.images.original.url;
       });
-    // next button
-
-    const message = document.createElement('div');
-    const message1 = document.createElement('p');
-    message1.textContent = 'even though you would think this is a normal Wednesday for you, i think otherwise - that today is such a special day.';
-    const message2 = document.createElement('p');
-    message2.textContent = 'i am so grateful that you were born. you have been nothing but patient and understanding, which always amazes me.';
-    const message3 = document.createElement('p');
-    message3.textContent = 'you are my weirdo, my best friend, my fave bully, my chef, and my partner for life.';
-    const message4 = document.createElement('p');
-    message4.textContent = 'let\'s celebrate more birthdays, okay, babe? i love you so much! hope you liked this little surprise. <3';
-    message.append(message1, message2, message3, message4);
     const divider1 = document.createElement('hr');
     // next button
 
@@ -73,6 +63,11 @@ export default () => ({
           ['Happy birthday step love you!!', '-Kirk'],
         ],
       },
+      {
+        name: 'Reg',
+        picLink: regina,
+        message: [['tep, people may not see you as the most reliable person in the room, but you\'ve proven yourself as the most reliable friend. you are lucky to have someone like Adi, as well as I know that she is with you.', 'happiest birthday, esteban.']],
+      },
     ];
     friendGreetings.forEach((friend) => {
       const friendGreeting = document.createElement('div');
@@ -96,18 +91,35 @@ export default () => ({
       friendGreeting.appendChild(friendMessage);
       friendGreetingsContainer.appendChild(friendGreeting);
     });
-    const divider3 = document.createElement('hr');
     screenshotDiv.append(screenshotHeader, friendGreetingsHeader, friendGreetingsContainer);
+    const divider3 = document.createElement('hr');
+
+    const endDiv = document.createElement('div');
+    endDiv.id = 'end-div';
+    const endPic = new Image();
+    endPic.src = us;
+    endPic.id = 'us-pic';
+    const endMessage = document.createElement('div');
+    const message1 = document.createElement('p');
+    message1.textContent = 'even though you would think this is a normal Wednesday for you, i think otherwise - that today is such a special day.';
+    const message2 = document.createElement('p');
+    message2.textContent = 'i am so grateful that you were born. you have been nothing but patient and understanding, which always amazes me.';
+    const message3 = document.createElement('p');
+    message3.textContent = 'you are my weirdo, my best friend, my fave bully, my chef, and my partner for life.';
+    const message4 = document.createElement('p');
+    message4.textContent = 'let\'s celebrate more birthdays, okay, babe? i love you so much! hope you liked this little surprise. <3';
+    endMessage.append(message1, message2, message3, message4);
+    endDiv.append(endPic, endMessage);
 
     greetingCard.append(
       header1,
       img,
-      message,
       divider1,
       spotifyDiv,
       divider2,
       screenshotDiv,
       divider3,
+      endDiv,
     );
     return greetingCard;
   },

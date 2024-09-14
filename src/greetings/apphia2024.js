@@ -1,70 +1,118 @@
 import './apphia2024.css';
+import coverDisc from '../assets/apphia2024/cover-disc.jpeg';
+import mom from '../assets/apphia2024/mom.JPG';
+import dad from '../assets/apphia2024/dad.jpeg';
+import chester from '../assets/apphia2024/chester.jpg';
+import shai from '../assets/apphia2024/shai.jpg';
+import hysher from '../assets/apphia2024/hysher.jpg';
 
 export default () => ({
   code: 'AF09202024',
   renderGreetingCard() {
     const greetingCard = document.createElement('div');
+    greetingCard.id = 'apphia2024';
     greetingCard.className = 'greeting-card';
 
+    const headerDiv = document.createElement('div');
+    headerDiv.className = 'header-div';
     const header1 = document.createElement('h1');
-    header1.textContent = '~ Happy birthday, Apphia! ~';
+    header1.textContent = '~ Happy 19th birthday, Apphia! ~';
+    const coverDiscImg = new Image();
+    coverDiscImg.src = coverDisc;
+    coverDiscImg.alt = 'cover-disc';
+    coverDiscImg.id = 'cover-disc';
+    const acronymHeader = document.createElement('p');
+    acronymHeader.textContent = 'hi bestie, i made an acronym of your name for my birthday message to you. 😆';
+    headerDiv.append(header1, coverDiscImg, acronymHeader);
 
-    // A is for Adorably Funny
-    const section1 = document.createElement('section');
-    const subHeader1 = document.createElement('h2');
-    subHeader1.textContent = 'A is for ';
-    const subHeader1Span = document.createElement('span');
-    subHeader1Span.textContent = 'Adorably Funny';
-    subHeader1.appendChild(subHeader1Span);
-    section1.appendChild(subHeader1);
+    const acronymDiv = document.createElement('div');
+    const acronym = [
+      { letter: 'A', meaning: 'Adorably Funny' },
+      { letter: 'P', meaning: 'Pretty Annoying' },
+      { letter: 'P', meaning: 'Poopy Pants' },
+      { letter: 'H', meaning: 'Hangry' },
+      { letter: 'I', meaning: 'Intelligently Dumb' },
+      { letter: 'A', meaning: 'Always My Sister' },
+    ];
+    acronymDiv.className = 'acronym-container';
+    acronym.forEach((letter) => {
+      const section = document.createElement('section');
+      const subHeader = document.createElement('h2');
+      subHeader.className = 'acronym-letter';
+      subHeader.textContent = `${letter.letter} is for `;
+      const subHeaderSpan = document.createElement('span');
+      subHeaderSpan.textContent = letter.meaning;
+      subHeader.appendChild(subHeaderSpan);
+      section.appendChild(subHeader);
+      acronymDiv.appendChild(section);
+    });
 
-    // repeat above code for each letter in the name
-    // P is for Pretty Annoying
-    const section2 = document.createElement('section');
-    const subHeader2 = document.createElement('h2');
-    subHeader2.textContent = 'P is for ';
-    const subHeader2Span = document.createElement('span');
-    subHeader2Span.textContent = 'Pretty Annoying';
-    subHeader2.appendChild(subHeader2Span);
-    section2.appendChild(subHeader2);
+    const friendGreetingsInstruction = document.createElement('p');
+    friendGreetingsInstruction.id = 'friend-greetings-instruction';
+    friendGreetingsInstruction.textContent = 'Here are some birthday greetings from your friends and loved ones! Hover over (for desktop) or tap (for mobile) the cards to see their messages. 🥳';
 
-    // P is for Poopy Pants
-    const section3 = document.createElement('section');
-    const subHeader3 = document.createElement('h2');
-    subHeader3.textContent = 'P is for ';
-    const subHeader3Span = document.createElement('span');
-    subHeader3Span.textContent = 'Poopy Pants';
-    subHeader3.appendChild(subHeader3Span);
-    section3.appendChild(subHeader3);
+    const friendGreetingsContainer = document.createElement('div');
+    friendGreetingsContainer.id = 'friend-greetings-container';
+    const friendGreetings = [
+      {
+        name: 'Mom',
+        picSrc: mom,
+        message: ['Eto yung message ko,', 'Apingping, i love you! Stay humble and the Lord will lift you up! You are fearless! Jesus loves you!'],
+      },
+      {
+        name: 'Dad',
+        picSrc: dad,
+        message: ['Hey my digital nomad buddy! Anywhere, anytime we strike together!', 'Keep on growing and glowing in the Lord!! We love you! ❤️'],
+      },
+      {
+        name: 'Kuya Chester',
+        picSrc: chester,
+        message: ['Happy Birthday, Apphiaaaaaa! 🎉 I hope your special day is filled with joy, laughter, and all the things you love. You deserve all the happiness in the world. Can\'t wait to celebrate with you and make more amazing memories together! Have a fantastic day! 💖'],
+      },
+      {
+        name: 'Shatina',
+        picSrc: shai,
+        message: ['Happy 19th ate apita!', 'I miss you so much, and i wish you the best of the best!', 'always take care,', 'love you to the alpha and back', 'c u soon!!', '- shai'],
+      },
+      {
+        name: 'Hysher',
+        picSrc: hysher,
+        message: ['Hi girlie, happy happy birthday! So grateful for u 🙄😝 hang soon ILY po 😍'],
+      },
+    ];
 
-    // H is for Hangry
-    const section4 = document.createElement('section');
-    const subHeader4 = document.createElement('h2');
-    subHeader4.textContent = 'H is for ';
-    const subHeader4Span = document.createElement('span');
-    subHeader4Span.textContent = 'Hangry';
-    subHeader4.appendChild(subHeader4Span);
-    section4.appendChild(subHeader4);
+    friendGreetings.forEach((friend) => {
+      const friendDiv = document.createElement('div');
+      friendDiv.className = 'friend-greeting';
+      const friendDivInner = document.createElement('div');
+      friendDivInner.className = 'friend-greeting-inner';
 
-    // I is for Intelligently Dumb
-    const section5 = document.createElement('section');
-    const subHeader5 = document.createElement('h2');
-    subHeader5.textContent = 'I is for ';
-    const subHeader5Span = document.createElement('span');
-    subHeader5Span.textContent = 'Intelligently Dumb';
-    subHeader5.appendChild(subHeader5Span);
-    section5.appendChild(subHeader5);
+      const friendDivFront = document.createElement('div');
+      friendDivFront.className = 'friend-greeting-front';
+      const friendPic = document.createElement('img');
+      friendPic.src = friend.picSrc;
+      friendPic.alt = friend.name;
+      friendPic.className = 'friend-pic';
+      friendDivFront.appendChild(friendPic);
 
-    // A is for Always My Sister
-    const section6 = document.createElement('section');
-    const subHeader6 = document.createElement('h2');
-    subHeader6.textContent = 'A is for ';
-    const subHeader6Span = document.createElement('span');
-    subHeader6Span.textContent = 'Always My Sister';
-    subHeader6.appendChild(subHeader6Span);
-    section6.appendChild(subHeader6);
+      const friendDivBack = document.createElement('div');
+      friendDivBack.className = 'friend-greeting-back';
+      friend.message.forEach((line) => {
+        const messageLine = document.createElement('p');
+        messageLine.textContent = line;
+        friendDivBack.appendChild(messageLine);
+      });
+      friendDivInner.append(friendDivFront, friendDivBack);
+      friendDiv.append(friendDivInner);
+      friendGreetingsContainer.appendChild(friendDiv);
+    });
 
-    greetingCard.append(header1, section1, section2, section3, section4, section5, section6);
+    greetingCard.append(
+      headerDiv,
+      acronymDiv,
+      friendGreetingsInstruction,
+      friendGreetingsContainer,
+    );
 
     return greetingCard;
   },

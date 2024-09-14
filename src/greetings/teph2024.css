@@ -41,7 +41,8 @@ h1 {
     text-align: center;
 }
 
-img#party-cat {
+img#party-cat,
+img#us-pic {
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -131,12 +132,20 @@ img#spotify-logo {
     color: var(--light-color);
 }
 
+#end-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+}
+
 @media (max-width: 768px) {
     #teph2024 {
         width: 70% !important;
     }
 
-    img#party-cat {
+    img#party-cat,
+    img#us-pic {
         width: 200px;
         height: 200px;
     }
