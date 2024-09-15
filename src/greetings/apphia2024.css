@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
   --duke-blue: #090c9b;
   --madder: #9e0031;
@@ -8,13 +10,19 @@ body {
   background-color: var(--duke-blue) !important;
   transition: background-color 2s ease;
   color: var(--text-color);
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
+  height: max-content;
 }
 
 #apphia2024 {
   gap: 1em;
+  border: 10px solid var(--madder);
+  border-radius: 10px;
+  margin-bottom: 1em;
 }
 
 .header-div {
@@ -25,12 +33,23 @@ body {
   gap: 1em;
 }
 
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 #cover-disc {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   padding: 1em;
-  border: 1px solid var(--text-color);
+  border: 10px solid var(--text-color);
+  animation: rotate 7s linear infinite;
 }
 
 h1 {
@@ -58,8 +77,19 @@ h1 {
 }
 
 section {
-  width: 100%;
+  width: 60%;
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-left: 3px solid var(--madder);
+  border-right: 3px solid var(--madder);
+}
+
+.acronym-pic {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 section:nth-of-type(odd) {
@@ -68,7 +98,10 @@ section:nth-of-type(odd) {
 
 section:nth-of-type(even) {
   background-color: var(--duke-blue);
-  border: 1px solid var(--madder);
+}
+
+section:last-of-type {
+  border-bottom: 3px solid var(--madder);
 }
 
 #friend-greetings-instruction{
@@ -86,9 +119,10 @@ section:nth-of-type(even) {
 
 .friend-greeting {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   perspective: 1000px;
+  cursor: pointer;
 }
 
 .friend-greeting-inner {
@@ -137,13 +171,40 @@ section:nth-of-type(even) {
 }
 
 .friend-pic {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 768px) {
+  #apphia2024 {
+    border: none;
+  }
+
   #cover-disc {
     width: 150px;
     height: 150px;
+  }
+
+  section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+  }
+
+  .acronym-pic {
+    width: 200px;
+  }
+
+  .friend-greeting, .friend-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .friend-greeting {
+    font-size: 0.6em;
   }
 }

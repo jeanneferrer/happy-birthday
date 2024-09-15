@@ -1,10 +1,19 @@
 import './apphia2024.css';
-import coverDisc from '../assets/apphia2024/cover-disc.jpeg';
+import coverDisc from '../assets/apphia2024/cover-disc.jpg';
 import mom from '../assets/apphia2024/mom.JPG';
 import dad from '../assets/apphia2024/dad.jpeg';
 import chester from '../assets/apphia2024/chester.jpg';
 import shai from '../assets/apphia2024/shai.jpg';
+import ken from '../assets/apphia2024/ken.jpg';
 import hysher from '../assets/apphia2024/hysher.jpg';
+import iris from '../assets/apphia2024/iris.jpg';
+import dhriti from '../assets/apphia2024/dhriti.jpg';
+import af from '../assets/apphia2024/af.jpeg';
+import pa from '../assets/apphia2024/pa.jpeg';
+import pp from '../assets/apphia2024/pp.jpeg';
+import h from '../assets/apphia2024/h.jpeg';
+import ibw from '../assets/apphia2024/ibw.jpg';
+import ams from '../assets/apphia2024/ams.jpeg';
 
 export default () => ({
   code: 'AF09202024',
@@ -27,12 +36,12 @@ export default () => ({
 
     const acronymDiv = document.createElement('div');
     const acronym = [
-      { letter: 'A', meaning: 'Adorably Funny' },
-      { letter: 'P', meaning: 'Pretty Annoying' },
-      { letter: 'P', meaning: 'Poopy Pants' },
-      { letter: 'H', meaning: 'Hangry' },
-      { letter: 'I', meaning: 'Intelligently Dumb' },
-      { letter: 'A', meaning: 'Always My Sister' },
+      { letter: 'A', meaning: 'Adorably Funny', picSrc: af },
+      { letter: 'P', meaning: 'Pretty Annoying', picSrc: pa },
+      { letter: 'P', meaning: 'Poopy Pants', picSrc: pp },
+      { letter: 'H', meaning: 'Hangry', picSrc: h },
+      { letter: 'I', meaning: 'Intelligent (???)', picSrc: ibw },
+      { letter: 'A', meaning: 'Always My Sister', picSrc: ams },
     ];
     acronymDiv.className = 'acronym-container';
     acronym.forEach((letter) => {
@@ -42,8 +51,11 @@ export default () => ({
       subHeader.textContent = `${letter.letter} is for `;
       const subHeaderSpan = document.createElement('span');
       subHeaderSpan.textContent = letter.meaning;
+      const img = new Image();
+      img.src = letter.picSrc;
+      img.className = 'acronym-pic';
       subHeader.appendChild(subHeaderSpan);
-      section.appendChild(subHeader);
+      section.append(subHeader, img);
       acronymDiv.appendChild(section);
     });
 
@@ -75,9 +87,24 @@ export default () => ({
         message: ['Happy 19th ate apita!', 'I miss you so much, and i wish you the best of the best!', 'always take care,', 'love you to the alpha and back', 'c u soon!!', '- shai'],
       },
       {
+        name: 'Kuya Ken',
+        picSrc: ken,
+        message: ['Happy Birthday Apphia! Wishing you all the best things in life. Enjoy your special day and Ingats as well always.  God bless!', '- kuya ken'],
+      },
+      {
         name: 'Hysher',
         picSrc: hysher,
         message: ['Hi girlie, happy happy birthday! So grateful for u 🙄😝 hang soon ILY po 😍'],
+      },
+      {
+        name: 'Iris',
+        picSrc: iris,
+        message: ['hi apph!!! happy birthday :)) ur one of my bffs and i cant wait to spend my years in uni with an amazing person like u :3'],
+      },
+      {
+        name: 'Dhriti',
+        picSrc: dhriti,
+        message: ['i\'ve know you for 2 years now I still remember the first time we met. It was the most random day at school and you showed up..sat right in front of me 😭 I never thought you were gonna be this close but here we are! thank you for everything🎀 thank you for making me laugh, being there for me, motivating me to do better, and always hearing me out. I hope that we stay friends for a long long time and I love you. I hope this year brings you wonderful memories!!! let\'s go to the Philippines together.'],
       },
     ];
 
