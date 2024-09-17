@@ -5,6 +5,7 @@ import gabAly from '../assets/teph2024/gab-aly.jpg';
 import regina from '../assets/teph2024/reg.jpg';
 import us from '../assets/teph2024/us.jpg';
 import jeck from '../assets/teph2024/jeck.jpg';
+import zoeyAndFam from '../assets/teph2024/zoey-and-fam.jpg';
 
 export default () => ({
   code: 'SDA09182024',
@@ -74,6 +75,11 @@ export default () => ({
         name: 'Jeck',
         picLink: jeck,
         message: [['to the man who owes me 2 cans of that one discontinued energy drink or should pay me a 100. happy birthday man, thanks for accompanying my stupid depressed ass xD', 'glad you now have someone supporting you other than us, youre a lucky bastard xD', 'proud of you for choosing to give yourself a chance to see a better day.', 'happy birthday again brotha. lets hang out again some time, cheers.']],
+      },
+      {
+        name: 'Zoey',
+        picLink: zoeyAndFam,
+        message: [['Happiest birthday, tito carl! Thank for everything you\'ve done. To all the lutang moments of mine, you still manage to understand me. Huhu kalmahan mo magluto tataba na koooo. I hope you are happy spending your life with the  people you love and with ate adi! Enjoy your birthday at don\'t be sawa sa lahat ng tinatanong ko!!', 'Much love, Zoey!']],
       },
     ];
     friendGreetings.forEach((friend) => {
