@@ -4,10 +4,12 @@ import mom from '../assets/apphia2024/mom.JPG';
 import dad from '../assets/apphia2024/dad.jpeg';
 import chester from '../assets/apphia2024/chester.jpg';
 import shai from '../assets/apphia2024/shai.jpg';
+import nian from '../assets/apphia2024/nian.jpg';
 import ken from '../assets/apphia2024/ken.jpg';
 import hysher from '../assets/apphia2024/hysher.jpg';
 import iris from '../assets/apphia2024/iris.jpg';
 import dhriti from '../assets/apphia2024/dhriti.jpg';
+import yiona from '../assets/apphia2024/yiona.jpg';
 import af from '../assets/apphia2024/af.jpeg';
 import pa from '../assets/apphia2024/pa.jpeg';
 import pp from '../assets/apphia2024/pp.jpeg';
@@ -87,6 +89,11 @@ export default () => ({
         message: ['Happy 19th ate apita!', 'I miss you so much, and i wish you the best of the best!', 'always take care,', 'love you to the alpha and back', 'c u soon!!', '- shai'],
       },
       {
+        name: 'Nian',
+        picSrc: nian,
+        message: ['Ate apphia!!! Happy happy 19th! I miss your laugh, sillyness, and when you always piggy back ride me. I love you and miss you so much na!! HAPPY BIRTHDAY!💘'],
+      },
+      {
         name: 'Kuya Ken',
         picSrc: ken,
         message: ['Happy Birthday Apphia! Wishing you all the best things in life. Enjoy your special day and Ingats as well always.  God bless!', '- kuya ken'],
@@ -105,6 +112,11 @@ export default () => ({
         name: 'Dhriti',
         picSrc: dhriti,
         message: ['i\'ve know you for 2 years now I still remember the first time we met. It was the most random day at school and you showed up..sat right in front of me 😭 I never thought you were gonna be this close but here we are! thank you for everything🎀 thank you for making me laugh, being there for me, motivating me to do better, and always hearing me out. I hope that we stay friends for a long long time and I love you. I hope this year brings you wonderful memories!!! let\'s go to the Philippines together.'],
+      },
+      {
+        name: 'Yiona',
+        picSrc: yiona,
+        message: ['It\'s someone\'s... birthday?????', 'lol happy birthday apphia... (ig)', 'HAHA joke lang.. happy 19! You\'re like very old..', 'Thank you so much for being my friend even if you\'re oceans away (we\'re technically still an ocean away from each other even tho were in the same country lol). Thank you for staying up late to just kwentoe with me hehe (we need to call again u lazy bum).  And thank you for matching my level of weirdness :]', 'I will always be here to remind you about Mission Impossible, chaewon, and that wolf guy (I forgot but his movie is in Netflix now). ', 'I hope you enjoy your day and continue to be weird!!!!!!!!!!!!!!!!!!!', '(Vesta says happy birthday and that you should wait until next year for more pics of herself)'],
       },
     ];
 

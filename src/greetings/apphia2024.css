@@ -86,7 +86,7 @@ section {
 }
 
 .acronym-pic {
-  width: 300px;
+  width: 200px;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -123,6 +123,10 @@ section:last-of-type {
   height: 400px;
   perspective: 1000px;
   cursor: pointer;
+}
+
+.friend-greeting:nth-of-type(10) {
+  font-size: 0.7em;
 }
 
 .friend-greeting-inner {
@@ -197,6 +201,10 @@ section:last-of-type {
 
   .acronym-pic {
     width: 200px;
+  }
+
+  .friend-greeting:nth-of-type(10) {
+    font-size: 0.5em;
   }
 
   .friend-greeting, .friend-pic {
