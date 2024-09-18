@@ -3,7 +3,6 @@ import './styles.css';
 
 const listOfCodes = {
   AF09202024: 'apphia2024',
-  SDA09182024: 'teph2024',
 };
 
 function renderGreeting(inputValue) {
