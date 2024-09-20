@@ -10,6 +10,7 @@ import hysher from '../assets/apphia2024/hysher.jpg';
 import iris from '../assets/apphia2024/iris.jpg';
 import dhriti from '../assets/apphia2024/dhriti.jpg';
 import yiona from '../assets/apphia2024/yiona.jpg';
+import yelenis from '../assets/apphia2024/yelenis.JPG';
 import af from '../assets/apphia2024/af.jpeg';
 import pa from '../assets/apphia2024/pa.jpeg';
 import pp from '../assets/apphia2024/pp.jpeg';
@@ -117,6 +118,11 @@ export default () => ({
         name: 'Yiona',
         picSrc: yiona,
         message: ['It\'s someone\'s... birthday?????', 'lol happy birthday apphia... (ig)', 'HAHA joke lang.. happy 19! You\'re like very old..', 'Thank you so much for being my friend even if you\'re oceans away (we\'re technically still an ocean away from each other even tho were in the same country lol). Thank you for staying up late to just kwentoe with me hehe (we need to call again u lazy bum).  And thank you for matching my level of weirdness :]', 'I will always be here to remind you about Mission Impossible, chaewon, and that wolf guy (I forgot but his movie is in Netflix now). ', 'I hope you enjoy your day and continue to be weird!!!!!!!!!!!!!!!!!!!', '(Vesta says happy birthday and that you should wait until next year for more pics of herself)'],
+      },
+      {
+        name: 'Yelenis',
+        picSrc: yelenis,
+        message: ['Happy 19ths, Apphia. You are getting old. Soon, you will be an old lady and a really short one. XD Jokes. I am very proud of you, and I hope you graduate and have the future you desire. I want you to know that I love you very much. You are one of the most important people in my life right now, the best friend I could ever ask for. I will always love you, and I will be here for whatever you need. Happy Birthday, loves you, Yelenis.'],
       },
     ];
 
