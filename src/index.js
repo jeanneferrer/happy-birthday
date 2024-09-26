@@ -2,7 +2,6 @@ import './styles.css';
 // import Icon from './icon.png';
 
 const listOfCodes = {
-  AF09202024: 'apphia2024',
 };
 
 function renderGreeting(inputValue) {
